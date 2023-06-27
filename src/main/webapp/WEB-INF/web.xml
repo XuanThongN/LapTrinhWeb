@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>LapTrinhWeb</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>pxu.edu.vn.bai01.HelloWorld</servlet-name>
+		<servlet-class>pxu.edu.vn.bai01.HelloWorld</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pxu.edu.vn.bai01.HelloWorld</servlet-name>
+		<url-pattern>/HelloWorld</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>pxu.edu.vn.bai02.HelloForm</servlet-name>
+		<servlet-class>pxu.edu.vn.bai02.HelloForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pxu.edu.vn.bai02.HelloForm</servlet-name>
+		<url-pattern>/HelloForm</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>pxu.edu.vn.bai05.FormLogin</servlet-name>
+		<servlet-class>pxu.edu.vn.bai05.FormLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pxu.edu.vn.bai05.FormLogin</servlet-name>
+		<url-pattern>/FormLogin</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>pxu.edu.vn.bai03.LogFilter</filter-name>
+		<filter-class>pxu.edu.vn.bai03.LogFilter</filter-class>
+		<init-param>
+			<param-name>test-param</param-name>
+			<param-value>Initialization Paramter</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>pxu.edu.vn.bai03.LogFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

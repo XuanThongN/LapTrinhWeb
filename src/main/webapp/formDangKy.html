@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký tài khoản</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Đăng ký tài khoản</h1>
+		<form id="registrationForm" method="post" action="RegisteringForm">
+			<div class="form-group">
+				<label for="lastName">Họ:</label> <input type="text"
+					class="form-control" id="lastName" name="lastName" required>
+			</div>
+			<div class="form-group">
+				<label for="firstName">Tên:</label> <input type="text"
+					class="form-control" id="firstName" name="firstName" required>
+			</div>
+			<div class="form-group">
+				<label for="birthdate">Ngày sinh:</label> <input type="date"
+					class="form-control" id="birthdate" name="birthdate" required>
+			</div>
+			<div class="form-group">
+				<label for="gender">Giới tính:</label> <select class="form-control"
+					id="gender" name="gender" required>
+					<option value="">Chọn giới tính</option>
+					<option value="Nam">Nam</option>
+					<option value="Nữ">Nữ</option>
+					<option value="Không xác định">Không xác định</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="email">Địa chỉ email:</label> <input type="email"
+					class="form-control" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="username">Tên tài khoản:</label> <input type="text"
+					class="form-control" id="username" name="username" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Mật khẩu:</label> <input type="password"
+					class="form-control" id="password" name="password" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Đăng ký</button>
+		</form>
+	</div>
+	<style>
+.error {
+	color: red;
+}
+</style>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+	<script>
+$(document).ready(function() {
+  $('#registrationForm').validate({
+    rules: {
+      lastName: 'required',
+      firstName: 'required',
+      birthdate: 'required',
+      gender: 'required',
+      email: {
+        required: true,
+        email: true
+      },
+      username: {
+        required: true,
+        minlength: 8
+      },
+      password: {
+        required: true,
+        minlength: 8
+      }
+    },
+    messages: {
+      lastName: 'Vui lòng nhập họ',
+      firstName: 'Vui lòng nhập tên',
+      birthdate: 'Vui lòng chọn ngày sinh',
+      gender: 'Vui lòng chọn giới tính',
+      email: {
+        required: 'Vui lòng nhập địa chỉ email',
+        email: 'Vui lòng nhập địa chỉ email hợp lệ'
+      },
+      username: {
+        required: 'Vui lòng nhập tên tài khoản',
+        minlength: 'Tên tài khoản phải chứa ít nhất 8 ký tự'
+      },
+      password: {
+        required: 'Vui lòng nhập mật khẩu',
+        minlength: 'Mật khẩu phải chứa ít nhất 8 ký tự'
+      }
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
+</script>
+
+</body>
+</html>

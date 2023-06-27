@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f7f7f7;
+    }
+
+    .login-container {
+      margin-top: 150px;
+    }
+
+    .login-container .row {
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .login-container h3 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .login-container .btn-primary {
+      background-color: #1abc9c;
+      border-color: #1abc9c;
+    }
+
+    .login-container .btn-primary:hover {
+      background-color: #148f77;
+      border-color: #148f77;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 login-container">
+        <h3>Login</h3>
+        <form method="post" action="FormLogin">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

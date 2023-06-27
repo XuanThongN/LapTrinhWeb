@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form action="XuLyForm" method="POST">
+        <label for="textfield">Text Field:</label>
+        <input type="text" id="textfield" name="textfield"><br><br>
+
+        <input type="hidden" name="hiddentextfield" value="hidden value"><br><br>
+
+        <label for="checkbox">Check Box:</label>
+        <input type="checkbox" id="checkbox" name="checkbox" value="check value"><br><br>
+
+        <label for="listbox">List Box:</label>
+        <select id="listbox" name="listbox">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select><br><br>
+
+        <label for="radiobutton1">Radio Button 1:</label>
+        <input type="radio" id="radiobutton1" name="radiobutton" value="radio1"><br>
+
+        <label for="radiobutton2">Radio Button 2:</label>
+        <input type="radio" id="radiobutton2" name="radiobutton" value="radio2"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
