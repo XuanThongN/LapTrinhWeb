@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>BUOI HOC DAU TIEN</title>
+<title>BUỔI HỌC ĐẦU TIÊN</title>
 </head>
 <body>
 <% out.print(8/0);%>
